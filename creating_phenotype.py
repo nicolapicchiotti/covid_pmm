@@ -4,7 +4,7 @@ Created on Sun May 10 20:25:17 2020
 
 @author: HO18971
 """
-
+import numpy as np
 import pandas as pd
 from utilities import load_task, plot_olr
 df_threshold = pd.read_csv('thresholds_olr.csv').set_index('thresholds')
@@ -39,7 +39,7 @@ def f_(t):
     elif t in grading_negative:
         return 0
     else:
-        return 'none'
+        return np.nan
 
 grading_positive = [1, 2, 3, 4, 5]
 grading_negative = [-1, -2, -3, -4, 5]
